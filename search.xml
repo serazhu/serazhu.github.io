@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[script元素相关知识]]></title>
     <url>%2F2018%2F05%2F19%2Fscript%E5%85%83%E7%B4%A0%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%2F</url>
-    <content type="text"><![CDATA[本文介绍了，script元素的属性、script标签在文档位置、动态加载js的方法。]]></content>
+    <content type="text"><![CDATA[本文介绍了，script元素的属性、动态加载js的方法、script标签在文档放置位置建议。 script元素属性type指示脚本的MIME类型。例如：type=&quot;text/javascript&quot; 、type=&quot;text/x-template&quot; src规定外部脚本的url defer规定脚本是否延迟执行。适用于外部脚本（ie4~ie7浏览器还适用于内联脚本）。当defer=&quot;defer&quot;时，脚本非阻塞式立即下载，加载和渲染后续文档元素和脚本的下载并行进行（异步），直到页面加载完成才执行脚本，在DOMContentLoaded事件触发之前完成（在window.onload之前执行）。 asyns非阻塞式立即下载，加载和渲染后续文档元素和脚本的下载与执行并行进行（异步）。仅适用于外部脚本。 charset定义外部脚本文件中所使用的字符编码。 language不赞成使用，用type代替。规定脚本语言。 在页面加入script的几种方式1.用script标签直接插入脚本当浏览器遇到&lt;script&gt;标签，会停下来，下载外部文件代码(如果存在src引入的外部代码)，然后解析并运行这些代码。此过程，页面解析和用户交互是完全被阻塞的。可以利用script元素的属性改为非阻塞式。 2.动态加载脚本动态加载的js脚本，下载时时非阻塞的运行时是阻塞的。 2.1通过设置src属性动态加载脚本12345var head = document.getElementsByTagName('head')[0];var script = document.createElement('script');script.stype = "text/javascript";script.src = "https://cdn.bootcss.com/vue/2.5.16/vue.js";head.appendChild(script); 2.2通过文本节点插入到script标签中12345var head = document.getElementsByTagName('head')[0];var script = document.createElement('script');script.stype = "text/javascript";script.appendChild(document.createTextNode("var a = 1;"));head.appendChild(script); 2.2通过script标签text属性插入12345var head = document.getElementsByTagName('head')[0];var script = document.createElement('script');script.stype = "text/javascript";script.text = "var a = 1;";head.appendChild(script);]]></content>
       <categories>
         <category>js基础知识</category>
       </categories>
