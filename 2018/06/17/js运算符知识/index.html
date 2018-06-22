@@ -89,7 +89,7 @@
 <meta property="og:description" content="本文介绍了，js运算符的知识。包括js中的表达式、运算符的分类、运算符的优先级、运算符的结合性、运算符的运算顺序等知识。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/06/17/js运算符知识/1.jpg">
-<meta property="og:updated_time" content="2018-06-21T12:53:38.780Z">
+<meta property="og:updated_time" content="2018-06-22T13:14:23.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js运算符知识">
 <meta name="twitter:description" content="本文介绍了，js运算符的知识。包括js中的表达式、运算符的分类、运算符的优先级、运算符的结合性、运算符的运算顺序等知识。">
@@ -445,6 +445,7 @@
 <h3 id="逗号运算符"><a href="#逗号运算符" class="headerlink" title="逗号运算符"></a>逗号运算符</h3><p>逗号运算符对它的每个操作数求值（从左到右），并返回最后一个操作数的值。<br>是优先级最低的运算符。</p>
 <h3 id="加性运算符"><a href="#加性运算符" class="headerlink" title="加性运算符"></a>加性运算符</h3><h4 id="加法运算符"><a href="#加法运算符" class="headerlink" title="加法运算符"></a>加法运算符</h4><ul>
 <li>如果有一个操作数是字符串类型，另一个操作数是原始类型值，将另一个操作数转为字符串，然后进行字符串拼接。</li>
+<li>如果两个操作数都是原始类型值且不是字符串类型，则将操作数转为数值，然后进行数值的相加。</li>
 <li>如果有一个操作数是字符串类型，另一个操作数是复杂类型值，先将另一个操作数转为原始类型值（先调用valueOf方法，不是原始值再调用toString方法），如果不是字符串类型，然后再转为字符串，进行字符串拼接。</li>
 <li>如果一个操作数是数字类型，另一个操作数是除了字符串之外的原始类型值，就将操作数转为数字，然后进行数字的相加。</li>
 <li>如果一个或两个操作数是复杂类型值，就将操作数转为原始值（先调用valueOf方法，不是原始值再调用toString方法），然后再按照上面的规则进行字符串拼接或数字的相加。</li>
